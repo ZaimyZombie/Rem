@@ -8,7 +8,7 @@ client.on("ready", () => {
 
 	var memberCount = client.users.size;
 	var serverCount = client.guilds.size;
-		client.user.setGame("candy crush au bureau");
+		client.user.setGame("préparé des cookies");
 		client.user.setStatus("online");
 	console.log("Je suis Online");
 	console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
@@ -48,7 +48,7 @@ client.on("message", (message) => {
 
         } catch (err) {
             message.delete();
-            message.channel.send("Abruti fait une commande qui existe")
+            message.channel.send("Vous vous êtes tromper de commande")
             console.error(err);
             console.log
         }
@@ -58,11 +58,11 @@ client.on("message", (message) => {
 //bienvenue et départ//
 
 client.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "bienvenue").send(`Bienvenue à toi ${member} et installe toi. Regarde le règlement et demande ton statut dans les salons adéquates. Si tu as des questions hésitent pas à demander aux admins, aux modérateurs ou moi. :kissing_closed_eyes:`)
+    member.guild.channels.find("name", ":hearts:bienvenue:hearts:").send(`Bienvenue ${member}! J'éspère que tu t'entendra bien avec tes amis ! :hearts:`)
 });
 
 client.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "bienvenue").send(`Dommage ${member} est parti, il va me manquer... Ou pas. Tu veux mon avis ? Je le trouvais moche.`)
+    member.guild.channels.find("name", ":hearts:bienvenue:hearts:").send(`Dommage ${member} est parti, il va me manquer... Ou pas. Tu veux mon avis ? Je le trouvais moche.`)
 });
 
 
