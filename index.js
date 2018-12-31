@@ -58,11 +58,11 @@ client.on("message", (message) => {
 //bienvenue et départ//
 
 client.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", ":hearts:bienvenue:hearts:").send(`Bienvenue ${member}! J'éspère que tu t'entendra bien avec tes amis ! :hearts:`)
+    member.guild.channels.find("name", "bienvenue").send(`Bienvenue ${member}! J'éspère que tu t'entendra bien avec tes amis ! :hearts:`)
 });
 
 client.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", ":hearts:bienvenue:hearts:").send(`Dommage ${member} est parti, il va me manquer... Ou pas. Tu veux mon avis ? Je le trouvais moche.`)
+    member.guild.channels.find("name", "bienvenue").send(`Dommage ${member} est parti, il va me manquer... Ou pas. Tu veux mon avis ? Je le trouvais moche.`)
 });
 
 
